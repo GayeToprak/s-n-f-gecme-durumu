@@ -1,0 +1,53 @@
+# s-n-f-gecme-durumu
+import java.util.Scanner;
+
+public class sinifiGecmeDurumu {
+    public static void main(String[] args){
+
+        int matematik,turkce,fizik,kimya,muzik;
+        int sonuc =0 , gecme;
+
+        Scanner inp = new Scanner(System.in);
+
+        System.out.print("matematik notunuzu giriniz:");
+        matematik = inp.nextInt();
+
+        System.out.print("turkce notunuzu giriniz:");
+        turkce = inp.nextInt();
+
+        System.out.print("fizik notunuzu giriniz:");
+        fizik = inp.nextInt();
+
+        System.out.print("kimya notunuzu giriniz:");
+        kimya = inp.nextInt();
+
+        System.out.print("muzik notunuzu giriniz:");
+        muzik = inp.nextInt();
+
+        if(matematik>0 && matematik<=100) {
+            sonuc += matematik;
+        }
+        if(turkce>0 && turkce<=100) {
+            sonuc += turkce;
+        }
+        if(fizik>0 && fizik<=100) {
+            sonuc += fizik;
+        }
+        if(kimya>0 && kimya<=100) {
+            sonuc += kimya;
+        }
+        if(muzik>0 && muzik<=100) {
+            sonuc += muzik;
+        }
+        gecme = sonuc/5;
+
+        if(gecme>55) {
+            System.out.println("sınıfı geçtiniz!");
+            System.out.println("gecme:"+gecme);
+        }else{
+            System.out.println("sınıfta kaldınız!");
+            System.out.println("gecme:"+gecme);
+        }
+
+    }
+}
